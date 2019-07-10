@@ -1,7 +1,7 @@
 const fs = require('fs')
 const NodeCache  = require('node-cache')
 const dirCache = new NodeCache()
-const cacheConfig = require('../config/cacheConfig')
+const cacheConfig = require('../config/cacheConfig.json')
 
 module.exports = (dirPath) => {
     return new Promise((resolve, reject) => {

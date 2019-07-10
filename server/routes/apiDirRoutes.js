@@ -1,9 +1,10 @@
 const router = require('express').Router()
 const path = require('path')
 const dirReader = require('../utils/dirReader')
+const serverConfig = require('../config/serverConfig.json')
 
 router.get('/*', (req, res) => {
-    const dirPath = path.join(__dirname,".." ,process.env.ROOT_DIR, req.url)
+    const dirPath = path.join(__dirname,".." ,serverConfig.ROOT_DIR, req.url)
     dirReader(dirPath)
     .then(files => res.json(files))
     .catch(err => {
