@@ -11,8 +11,10 @@ const errorRoutes = require('./routes/errorRoutes')
 const serverConfig = require('./config/serverConfig.json')
 
 app.use(express.json())
+app.disable('x-powered-by')
 
 app.use(serverConfig.API_ROUTE, apiDirRoutes)
 app.use(errorRoutes)
+
 
 app.listen(port, () => console.log(`Serving on port: ${port}`))

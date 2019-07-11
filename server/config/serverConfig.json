@@ -1,4 +1,4 @@
 {
     "API_ROUTE": "/api/v2/dir/",
-    "ROOT_DIR": "/root"
+    "ROOT_DIR": "root"
 }

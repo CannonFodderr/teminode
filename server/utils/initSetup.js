@@ -3,7 +3,7 @@ const path = require('path')
 const serverConfig = require('../config/serverConfig.json')
 
 const checkRootFolder = () => {
-    const rootFolderPath = path.join(__dirname, "..", serverConfig.ROOT_DIR)
+    const rootFolderPath = path.join(__dirname, "../", serverConfig.ROOT_DIR)
     fs.access(rootFolderPath, (err) => {
         if(err) {
             console.error("Root folder not found...")
